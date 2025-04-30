@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        Application.targetFrameRate = 60;
+#endif
         InitializeSystems();
     }
 
